@@ -1,0 +1,16 @@
+extends layout
+block header
+block content
+  div(class="container")
+    p Sign up to view messages
+    br
+    div(class="form-group")
+      form(action='/users/signup', method='POST')
+            label Username:
+            input(type="text" name="username" placeholder="" class="form-control form-control-lg bg-dark")
+            br
+            label Password:
+            input(type="password" name="password" placeholder="" class="form-control form-control-lg bg-dark")
+            br
+            br
+            button(type="submit" class="btn btn-outline-success") Sign up

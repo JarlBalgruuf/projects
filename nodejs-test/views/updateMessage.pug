@@ -1,0 +1,23 @@
+extends layout
+block landingHeader
+block content
+  div(class="container")
+    p Create new message
+    br
+    div(class="form-group")
+      form(action='/messages/' + result._id + "/update" method='POST')
+            label Title:
+            input(type="text" name="title" placeholder="" value=result.title class="form-control  bg-dark" maxlength = "50" required readonly)
+            br
+            label Content:
+            textarea(type="text" name="content" placeholder=""  class="form-control  bg-dark" maxlength = "600" required) #{result.content}
+            label Image link:
+            input(type="text" name="image" placeholder="" value=result.image class="form-control bg-dark" maxlength = "200")
+            br
+            br
+            label= "Author: " + session.username
+            input(type="hidden" name="author" placeholder="" value=session.username class="form-control  bg-dark")
+            input(type="hidden" name="edited" placeholder="" value="true" class="form-control  bg-dark")
+            br
+            br
+            button(type="submit" class="btn btn-outline-success") Save
