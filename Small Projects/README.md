@@ -1,1 +1,1 @@
-Few simple pyhton projects and nodejs backend training
+Few simple pyhton projects, nodejs backend training and simple react portfolio page
