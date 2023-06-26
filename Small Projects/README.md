@@ -1,0 +1,1 @@
+Few simple pyhton projects and nodejs backend training
