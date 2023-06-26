@@ -1,0 +1,10 @@
+main > .container-fluid {
+    padding: 70px 2% 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+@media only screen and (max-width: 700px){
+    main > .container-fluid {
+        padding: 70px 2px 0;
+    }
+}
