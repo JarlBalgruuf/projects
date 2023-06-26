@@ -1,0 +1,41 @@
+doctype html
+html
+  head
+    title= title
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <!-- jQuery UI library -->
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <!-- Popper JS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  body(class="bg-dark text-light")
+    block header
+      div(class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-dark shadow")
+        a(href= "/messages" class="AppLink my-0 mr-md-auto font-weight-normal")
+          h1(class="my-0 mr-md-auto font-weight-normal") App
+        a(href= "/users/logout" class="btn btn-outline-danger") Logout
+    block landingHeader
+      div(class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-dark shadow")
+        h1(class="my-0 mr-md-auto font-weight-normal") App
+    block content
+    block footer
+      -function prettyDate(dateInput){
+        //if it's already a date object and not a string you don't need this line:
+        //-var date = new Date(dateString);
+        -var date = dateInput
+        -var d = date.getDate();
+        -var monthNames = [ "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" ];
+        -var m = monthNames[date.getMonth()];
+        -var y = date.getFullYear();
+        -var h = date.getHours();
+        -var min= date.getMinutes();
+        -if(min < 10){
+        -   min = "0" + min;  
+        -}
+        -var offset = date.getTimezoneOffset();
+        -return d+' '+m+' '+y+' '+h+':'+min+'';
+      -}

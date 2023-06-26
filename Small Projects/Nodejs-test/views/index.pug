@@ -1,0 +1,18 @@
+extends layout
+block header
+block content
+  div(class="container")
+    p Welcome to #{title}
+    br
+    div(class="form-group")
+      form(action='/users/login', method='POST')
+            label Username:
+            input(type="text" name="username" placeholder="" class="form-control form-control-lg color-light bg-dark")
+            br
+            label Password:
+            input(type="password" name="password" placeholder="" class="form-control form-control-lg bg-dark")
+            br
+            br
+            button(type="submit" class="btn btn-secondary") Login
+    br
+    a(href= "/users/signup" class="btn btn-outline-success") Sign up
