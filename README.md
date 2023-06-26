@@ -1,2 +1,2 @@
 # Snippets of codes from my projects <br/>
-nodejs training and virtual kymen group project
+Virtual Kymen internship group project and training projects 
