@@ -1,0 +1,40 @@
+
+
+.border-bottom {
+ border-color: #212121;
+}
+
+.form-control {
+  color: #fff;
+  border-color: #a8a8a8;
+}
+
+.form-control:focus {
+  color: #fff;
+  border-color: #FFF;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(255, 255, 255, 0.6);
+}
+
+.AppLink{
+  color:#fff !important;
+  text-decoration:none;
+}
+
+.AppLink:hover{
+  color:inherit;
+  text-decoration:inherit;
+}
+
+.AppLink:link {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+.commentList{
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+  margin-left: 20px;
+}
+
+
